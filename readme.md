@@ -91,7 +91,7 @@ Was it easy to change given your refactoring?
  
  with this idea, moves are not just a `position`, but have a score also. Move has out-grown it's primitive. **Introduce a 'Move' class.**
  
- After the move class is in place modify the program to calculate scores for moves, and return the move with the best score. We willneed to beable to compare "Moves".
+ After the move class is in place modify the program to calculate scores for moves, and return the move with the best score. We will need to be able to compare "Moves".
  
  ## [Advanced] Evaluate the opponent's move
  
