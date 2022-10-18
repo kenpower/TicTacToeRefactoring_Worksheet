@@ -62,4 +62,47 @@ You might have made the second loop look like this:
  
  *Hint: use a `result` var to return the correct move. Also no need to continue the loop if a winning move is found*
  
+ ## Next refactorings
+ 
+ Before reading on, have a look at your code. What should be the next refactor to tackle? Or an easier question, "Which part of the code is the stinkiest?"
+ 
+ There are still a lot of “magic numbers” floating around. 
+ The winner() routine is full of them, and we still have a “9” in the main loop of bestMoveFor().
+ What does "9" mean in this game.
+ 
+ Also there is a lot of duplication in the winner() method. **Eliminate this duplication**
+ 
+ ## More ways to win
+ 
+ To assess your previous, switch back to a development hat. 
+A change we need to maek is that we’re not playing tic-tac-toe yet because we’re only allowing horizontal 3-in-a-rows. 
+Extend the `winner()`routine to allow vertical and diagonal wins. **Write tests for these cases first!!**
+Was it easy to change given your refactoring?
+
+ ## Finding the Best move
+ 
+ Currently, we’re just looping through possible moves, trying to select the best one. 
+ Right now, we have a simple rule: wins are best, 
+ anything else is acceptable. But wins are rare; we’d like to pick a good intermediate move. 
+ (Some moves are better than others, implies move have a "value") 
+ We can think of each move as having a score: how good is it. 
+ Just to have something to work with, we’ll call a win worth 100 points, and any other move 0 points. 
+ (We can imagine a winning move by the other player being worth -100 points, but we don’t check for those—yet.)
+ 
+ with this idea, moves are not just a `position`, but have a score also. Move has out-grown it's primitive. **Introduce a 'Move' class.**
+ 
+ After the move class is in place modify the program to calculate scores for moves, and return the move with the best score. We willneed to beable to compare "Moves".
+ 
+ ## [Advanced] Evaluate the opponent's move
+ 
+ So far we score a winning move as 100 and "non-winning" moves as 0. How can we choose which "non-winning" move to play? One way would be to check if the oppoent could win following a "non-winning" move. if a "non-winning" move allows the opponent to win, the we can score that move as -100.
+ 
+Add another feature: (write st first) use the min-max algorithm. Instead of just saying "non-wins are all the same," you say "Choose my best move, assuming the opponent makes the move that's worst for me." The opponent uses the same rule. 
+ 
+ In artificial intelligence circles, the approach we’re using is known as min-max. When it’s our turn, we try to maximize our score. When it’s the opponent’s turn, they try to minimize our score. How is this reflected in this code? Is it a “trick”?
+ 
+ 
+ 
+ 
+ 
  
