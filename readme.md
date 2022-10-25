@@ -97,7 +97,7 @@ Was it easy to change given your refactoring?
  
  So far we score a winning move as 100 and "non-winning" moves as 0. How can we choose which "non-winning" move to play? One way would be to check if the oppoent could win following a "non-winning" move. if a "non-winning" move allows the opponent to win, the we can score that move as -100.
  
-Add another feature: (write st first) use the min-max algorithm. Instead of just saying "non-wins are all the same," you say "Choose my best move, assuming the opponent makes the move that's worst for me." The opponent uses the same rule. 
+Add another feature: (write a test first) use the min-max algorithm. Instead of just saying "non-wins are all the same," you say "Choose my best move, assuming the opponent makes the move that's worst for me." The opponent uses the same rule. Write a test to check that it doesn't give me a move which leaves the opponent with a winning move. 
  
  In artificial intelligence circles, the approach we’re using is known as min-max. When it’s our turn, we try to maximize our score. When it’s the opponent’s turn, they try to minimize our score. How is this reflected in this code? Is it a “trick”?
  
