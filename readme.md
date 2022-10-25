@@ -93,6 +93,8 @@ Was it easy to change given your refactoring?
  
  After the move class is in place modify the program to calculate scores for moves, and return the move with the best score. We will need to be able to compare "Moves".
  
+ Upload the file `TicTacToe.cpp` to the blackbaord Refactoring Lab assignment
+ 
  ## [Advanced] Evaluate the opponent's move
  
  So far we score a winning move as 100 and "non-winning" moves as 0. How can we choose which "non-winning" move to play? One way would be to check if the oppoent could win following a "non-winning" move. if a "non-winning" move allows the opponent to win, the we can score that move as -100.
