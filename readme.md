@@ -93,7 +93,7 @@ Was it easy to change given your refactoring?
  
  After the move class is in place modify the program to calculate scores for moves, and return the move with the best score. We will need to be able to compare "Moves".
  
- Upload the file `TicTacToe.cpp` to the blackbaord Refactoring Lab assignment
+ ### Upload the file `TicTacToe.cpp` to the blackbaord Refactoring Lab assignment
  
  ## [Advanced] Evaluate the opponent's move
  
