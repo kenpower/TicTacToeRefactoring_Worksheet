@@ -5,7 +5,7 @@ Notice that the `winner()` method is simplified: you win by getting three in a r
 Notice also that the heuristics for what to play are primitive: win if you can, play any valid move otherwise. 
 We’ll migrate toward something capable of more sophisticated strategies.
 
-## Before you change any code, make sure the test run and are green. If not, ask for help.
+## Before you change any code, make sure all the tests run and are green. If not, ask for help.
 
 ## Smells
 
