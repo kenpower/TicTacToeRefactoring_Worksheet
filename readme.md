@@ -24,8 +24,9 @@ Fix them one at a time. Run theest aerach change.
 
 ## Fuse loops
 
-We have two “for” loops: one to find a winning move, the other to find a default move.
-The loops have the same number of iterations. Maybe its reddundant visiting every part of the grid twice?
+We have two “for” loops: one to find a winning move, the other to find a default move (default == no winning move so pick any valid move).
+
+The loops have the same number of iterations. Maybe it is redundant visiting every part of the grid twice?
 One way to handle this would be to merge the two loops and handle things in one pass through the possible moves.
 
 **“Fuse Loops”** means combine two loops into one. Do so in small steps, in such a way that you maintain safety (keeps tests passing) as you do it. 
@@ -100,7 +101,7 @@ Was it easy to change given your refactoring?
  
  ### Upload the file `TicTacToe.cpp` to the blackbaord Refactoring Lab assignment
  
- ## [Advanced] Evaluate the opponent's move
+ ## [Advanced & Optional] Evaluate the opponent's move
  
  So far we score a winning move as 100 and "non-winning" moves as 0. How can we choose which "non-winning" move to play? One way would be to check if the oppoent could win following a "non-winning" move. if a "non-winning" move allows the opponent to win, the we can score that move as -100.
  
