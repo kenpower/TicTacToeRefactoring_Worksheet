@@ -54,7 +54,7 @@ You might have made the second loop look like this:
  It’s not necessary to stop when we find a viable move. (That is, there’s no harm in trying each possible move provided we prefer wins to defaults.) 
  So you can delete the “break” tests that exit early. Run the tests again and be sure you haven’t changed anything important.
  
- (**You may noy have failing tests, but the methods are returning correct results. You may have to change the tests**. What does this tell you?)
+ (**You may now have failing tests, but the methods are returning valid results. You may have to change the tests**. What does this tell you?)
  
  Now we have a single loop, but the condition to decide what to return is still a little complicated:
  
