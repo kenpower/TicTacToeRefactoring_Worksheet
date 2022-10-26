@@ -9,7 +9,7 @@ We’ll migrate toward something capable of more sophisticated strategies.
 
 ## Smells
 
-Go through this code and identify smells (code which which make the project less maintainable). Do you understand what method does? Do you understand what each loop is for? If teh answer to the previous questions is "No", then maybe that code could be come clearer 
+Go through this code and identify smells (code which which make the project less maintainable). Do you understand what all the methods do? Do you understand what each loop is for? If the answer to the previous questions is "No", then maybe the code could become clearer? 
 
 ## Easy changes
 
