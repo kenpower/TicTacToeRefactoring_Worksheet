@@ -9,7 +9,7 @@ We’ll migrate toward something capable of more sophisticated strategies.
 
 ## Smells
 
-Go through this code and identify smells (code which which make the project less maintainable).
+Go through this code and identify smells (code which which make the project less maintainable). Do you understand what method does? Do you understand what each loop is for? If teh answer to the previous questions is "No", then maybe that code could be come clearer 
 
 ## Easy changes
 
@@ -21,6 +21,8 @@ Fix them one at a time. Run theest aerach change.
 - [ ] The value -1 is a flag value; create a constant `NoMove` to represent it.
 - [ ] The `winner()` function has a lot of duplication. Eliminate the duplication.
 - [ ] The check for a board character being a ‘-’ is really a check that the square is unoccupied. Extract a method to do this, and name it appropriately.
+- [ ] Can the method you just created be used elsewhere to avoid duplication?
+- [ ] What does the `t` object represent in the `move` function? Should it have a better name?
 
 ## Fuse loops
 
