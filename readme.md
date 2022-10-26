@@ -17,7 +17,7 @@ It’s not always easy to know what to do with code. Let’s fix some of the eas
 Fix them one at a time. **Run the tests after each change**.
 
 - [ ] The name `move()` isn’t descriptive enough. Change it to `bestMoveFor()`. Use  `CRTL-R, CTRL-R` key.
-- [ ] The variable `i` doesn’t explain much either. It's not just an index variable, it represents something the game world. Change it to `move`. Use `CRTL-R, CTRL-R` key shortcut.
+- [ ] The variable `i` doesn’t explain much either. It's not just an index variable, it represents something the game world. Change it to `possibleMove`. Use `CRTL-R, CTRL-R` key shortcut.
 - [ ] The value -1 is a flag value; create a constant `NoMove` to represent it.
 - [ ] The check for a board character being a ‘-’ is really a check that the square is unoccupied. Extract a method to do this, and name it appropriately.
 - [ ] Can the method you just created to check an unoccupied square be used elsewhere to avoid duplication?
