@@ -14,7 +14,7 @@ Go through this code and identify smells (code which which make the project less
 ## Easy changes
 
 It’s not always easy to know what to do with code. Let’s fix some of the easy things first.
-Fix them one at a time. Run theest aerach change.
+Fix them one at a time. **Run the tests after each change**.
 
 - [ ] The name `move()` isn’t descriptive enough. Change it to `bestMoveFor()`. Use  `CRTL-R, CTRL-R` key.
 - [ ] The variable `i` doesn’t explain much either. It's not just an index variable, it represents something the game world. Change it to `move`. Use `CRTL-R, CTRL-R` key shortcut.
