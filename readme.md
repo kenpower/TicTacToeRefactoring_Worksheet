@@ -82,7 +82,7 @@ You might have made the second loop look like this:
  
  ## More ways to win
  
- To assess your previous, switch back to a development hat. 
+To assess your previous, switch back to a development hat. 
 A change we need to maek is that we’re not playing tic-tac-toe yet because we’re only allowing horizontal 3-in-a-rows. 
 Extend the `winner()`routine to allow vertical and diagonal wins. **Write tests for these cases first!!**
 Was it easy to change given your refactoring?
@@ -92,16 +92,21 @@ Was it easy to change given your refactoring?
  Currently, we’re just looping through possible moves, trying to select the best one. 
  Right now, we have a simple rule: wins are best, 
  anything else is acceptable. But wins are rare; we’d like to pick a good intermediate move. 
- (Some moves are better than others, implies move have a "value") 
- We can think of each move as having a score: how good is it. 
- Just to have something to work with, we’ll call a win worth 100 points, and any other move 0 points. 
- (We can imagine a winning move by the other player being worth -100 points, but we don’t check for those—yet.)
+ (Some moves are better than others, implies move have a "value")
  
- with this idea, moves are not just a `position`, but have a score also. Move has out-grown it's primitive. **Introduce a 'Move' class.**
+ We can think of each move as having a score: "how good is it?". 
+ Just to have something to work with, we’ll call a win worth 100 points, and any other move 0 points.
+ (We can imagine a winning move by the other player being worth -100 points, but we don’t check for those — yet.)
  
- After the move class is in place modify the program to calculate scores for moves, and return the move with the best score. We will need to be able to compare "Moves".
+ A smarter program would be able to score each valid move: There might be 100 point moves(win), -100 point moves (lose) and moves with scores inbetween.
  
- ### Upload the file `TicTacToe.cpp` to the blackbaord Refactoring Lab assignment
+ With scoreing in place we would like to return the *best* available move, the move with the higest score.
+ 
+ With this idea, moves are not just a `position`, but have a score also. Move has out-grown it's primitive. **Introduce a 'Move' class.**. Finding the best move is like finding the highest integer, but will need to be able to compare "Moves": `if(move1.isBetterThan(move2))` (**write tests for this**).
+ 
+ After the move class is in place, modify the program to calculate scores for moves, and return the square for the move with the best score. 
+ 
+ ### Upload the file `TicTacToe.cpp` to the blackbaord "Refactoring Lab" assignment
  
  ## [Advanced & Optional] Evaluate the opponent's move
  
