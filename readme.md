@@ -44,7 +44,7 @@ You might have made the second loop look like this:
      defaultMove = i;
  }
  ```
- We still have two loops, but we have made a step closer to fusing them. Ans our tests are still passing (have you checked???)
+ We still have two loops, but we have made a step closer to fusing them. And our tests are still passing (have you checked???)
  
  That was the safest approach, used because we did not want our refactoring to change behavior. 
  To be equivalent to the original, we need the guard clause to make sure we haven’t assigned a `defaultMove` yet.
