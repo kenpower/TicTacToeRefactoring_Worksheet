@@ -104,7 +104,7 @@ Was it easy to change given your refactoring?
  
  With this idea, moves are not just a `position`, but have a score also. Move has out-grown it's primitive. **Introduce a 'Move' class.**. Finding the best move is like finding the highest integer, but will need to be able to compare "Moves": `if(move1.isBetterThan(move2))` (**write tests for this**).
  
- After the move class is in place, modify the program to calculate scores for moves, and return the square for the move with the best score. 
+ After the move class is in place, modify the program to calculate scores for moves (winning = 100, others = 0), and return the square for the move with the best score. 
  
  ### Upload the file `TicTacToe.cpp` to the blackbaord "Refactoring Lab" assignment
  
