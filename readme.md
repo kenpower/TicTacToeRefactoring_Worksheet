@@ -31,7 +31,9 @@ One way to handle this would be to merge the two loops and handle things in one 
 **“Fuse Loops”** means combine two loops into one. Do so in small steps, in such a way that you maintain safety (keeps tests passing) as you do it. 
 When is it safe to merge two loops?
 
-One step along the way might be to assign a value to a temporary variable rather than return it right away. 
+**Many refactorings are too complicated to perform or understand in a single step. The refactoring often becomes clearer if it is broken into multiple steps (test should still pass between steps)**
+
+One step along the way to fuse loops might be to assign a value to a temporary variable rather than return it right away. 
 You might have made the second loop look like this:
 
 ```
@@ -42,9 +44,10 @@ You might have made the second loop look like this:
      defaultMove = i;
  }
  ```
+ We still have two loops, but we have made a step closer to fusing them. Ans our tests are still passing (have you checked???)
  
  That was the safest approach, used because we did not want our refactoring to change behavior. 
- To be equivalent to the original, we need the guard clause to make sure we haven’t assigned a defaultMove yet.
+ To be equivalent to the original, we need the guard clause to make sure we haven’t assigned a `defaultMove` yet.
  But let’s put on a development hat: we don’t really care which default move we make, so we could delete the “defaultMove==NoMove” condition. 
  It’s not necessary to stop when we find a viable move. (That is, there’s no harm in trying each possible move provided we prefer wins to defaults.) 
  So you can delete the “break” tests that exit early. Run the tests again and be sure you haven’t changed anything important. 
