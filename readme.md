@@ -16,11 +16,11 @@ Go through this code and identify smells (code which which make the project less
 It’s not always easy to know what to do with code. Let’s fix some of the easy things first.
 Fix them one at a time. Run theest aerach change.
 
-- [ ] The name `move()` isn’t descriptive enough. Change it to `bestMoveFor()`. Use `F2` key.
-- [ ] The variable `i` doesn’t explain much either. It's not just an index variable, it represents something the game world. Change it to `move`. Use `F2` key.
+- [ ] The name `move()` isn’t descriptive enough. Change it to `bestMoveFor()`. Use  `CRTL-R, CTRL-R` key.
+- [ ] The variable `i` doesn’t explain much either. It's not just an index variable, it represents something the game world. Change it to `move`. Use `CRTL-R, CTRL-R` key shortcut.
 - [ ] The value -1 is a flag value; create a constant `NoMove` to represent it.
 - [ ] The check for a board character being a ‘-’ is really a check that the square is unoccupied. Extract a method to do this, and name it appropriately.
-- [ ] Can the method you just created be used elsewhere to avoid duplication?
+- [ ] Can the method you just created to check an unoccupied square be used elsewhere to avoid duplication?
 - [ ] What does the `t` object represent in the `move` function? Should it have a better name?
 
 ## Fuse loops
@@ -76,7 +76,7 @@ You might have made the second loop look like this:
  
  There are still a lot of “magic numbers” floating around. 
  The winner() routine is full of them, and we still have a “9” in the main loop of bestMoveFor().
- What does "9" mean in this game.
+ What does "9" mean in this game?
  
  Also there is a lot of duplication in the winner() method. **Eliminate this duplication**
  
