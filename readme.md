@@ -19,7 +19,6 @@ Fix them one at a time. Run theest aerach change.
 - [ ] The name `move()` isn’t descriptive enough. Change it to `bestMoveFor()`. Use `F2` key.
 - [ ] The variable `i` doesn’t explain much either. It's not just an index variable, it represents something the game world. Change it to `move`. Use `F2` key.
 - [ ] The value -1 is a flag value; create a constant `NoMove` to represent it.
-- [ ] The `winner()` function has a lot of duplication. Eliminate the duplication.
 - [ ] The check for a board character being a ‘-’ is really a check that the square is unoccupied. Extract a method to do this, and name it appropriately.
 - [ ] Can the method you just created be used elsewhere to avoid duplication?
 - [ ] What does the `t` object represent in the `move` function? Should it have a better name?
@@ -53,8 +52,9 @@ You might have made the second loop look like this:
  To be equivalent to the original, we need the guard clause to make sure we haven’t assigned a `defaultMove` yet.
  But let’s put on a development hat: we don’t really care which default move we make, so we could delete the “defaultMove==NoMove” condition. 
  It’s not necessary to stop when we find a viable move. (That is, there’s no harm in trying each possible move provided we prefer wins to defaults.) 
- So you can delete the “break” tests that exit early. Run the tests again and be sure you haven’t changed anything important. 
- (*You may have to change the tests**. What does this tell you?)
+ So you can delete the “break” tests that exit early. Run the tests again and be sure you haven’t changed anything important.
+ 
+ (**You may noy have failing tests, but the methods are returning correct results. You may have to change the tests**. What does this tell you?)
  
  Now we have a single loop, but the condition to decide what to return is still a little complicated:
  
@@ -68,7 +68,7 @@ You might have made the second loop look like this:
  
  How would you simplify the above?
  
- *Hint: use a `result` var to return the correct move. Also no need to continue the loop if a winning move is found*
+ *Hint: use a single `result` var to return the correct move. Also no need to continue the loop if a winning move is found*
  
  ## Next refactorings
  
