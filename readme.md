@@ -106,7 +106,7 @@ Was it easy to change given your refactoring?
  
  After the move class is in place, modify the program to calculate scores for moves (winning = 100, others = 0), and return the square for the move with the best score. 
  
- ### Upload the file `TicTacToe.cpp` to the blackbaord "Refactoring Lab" assignment
+ ### Upload the file `TicTacToe.cpp` to the blackboard "Refactoring Lab" assignment
  
  ## [Advanced & Optional] Evaluate the opponent's move
  
