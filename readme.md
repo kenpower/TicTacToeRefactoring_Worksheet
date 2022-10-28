@@ -1,6 +1,6 @@
 # Refactoring exercise
 
-Examine the code in `TicTacToe.cpp` and the test in `test.cpp`. It has a simple implementation of a TicTacToe game.
+Examine the code in `TicTacToe.cpp` and the tests in `test.cpp`. It has a simple implementation of a TicTacToe game.
 Notice that the `winner()` method is simplified: you win by getting three in a row horizontally. 
 Notice also that the heuristics for what to play are primitive: win if you can, play any valid move otherwise. 
 We’ll migrate toward something capable of more sophisticated strategies.
@@ -102,13 +102,13 @@ Was it easy to change given your refactoring?
  
  With scoring in place we would like to return the *best* available move, the move with the higest score.
  
- With this idea, moves are not just a `position`, but have a score also. Move has out-grown it's primitive. **Introduce a 'Move' class.**. Finding the best move is like finding the highest integer, but will need to be able to compare "Moves": `if(move1.isBetterThan(move2))` (**write tests for this**).
+ With this idea, moves are not just a `position`, but have a score also. Move has out-grown it's primitive. **Introduce a 'Move' class.** (put it in `TicTacToe.cpp`). Finding the best move is like finding the highest integer, but will need to be able to compare "Moves": `if(move1.isBetterThan(move2))` (**write tests for this**).
  
  After the move class is in place, modify the program to calculate scores for moves (winning = 100, others = 0), and return the position for the move with the best score. 
  
  ### Push the project to the github repo
 
- ### Upload the file `TicTacToe.cpp` to the blackboard "Refactoring Lab" assignment
+ ### Upload the file `TicTacToe.cpp` & `test.cpp` to the blackboard "Refactoring Lab" assignment
  
  ## [Advanced & Optional] Evaluate the opponent's move
  
