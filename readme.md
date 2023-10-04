@@ -17,13 +17,19 @@ It’s not always easy to know what to do with code. Let’s fix some of the eas
 Fix them one at a time. **Run the tests after each change**.
 
 - [ ] The name `move()` isn’t descriptive enough. Change it to `bestMoveFor()`. Use  `CRTL-R, CTRL-R` key.
+- [ ] Run the tests (still green? If not, undo changes from previous step and try again)
 - [ ] The variable `i` doesn’t explain much either. It's not just an index variable, it represents something the game world. Change it to `possibleMove`. Use `CRTL-R, CTRL-R` key shortcut.
+- [ ] Run the tests (still green? If not, undo changes from previous step and try again)
 - [ ] The value -1 is a flag value; create a constant `NoMove` to represent it.
+- [ ] Run the tests (still green? If not, undo changes from previous step and try again)
 - [ ] The check for a board character being a ‘-’ is really a check that the square is unoccupied. Extract a method to do this, and name it appropriately.
+- [ ] Run the tests (still green? If not, undo changes from previous step and try again)
 - [ ] Can the method you just created to check an unoccupied square be used elsewhere to avoid duplication?
+- [ ] Run the tests (still green? If not, undo changes from previous step and try again)
 - [ ] What does the `t` object represent in the `move` function? Should it have a better name?
+- [ ] Run the tests (still green? If not, undo changes from previous step and try again)
 
-## Fuse loops
+## Fuse loops (**Do not proceed with this step unless you have finished the "Easy Changes" above**)
 
 We have two “for” loops: one to find a winning move, the other to find a default move (default == no winning move so pick any valid move).
 
