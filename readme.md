@@ -114,7 +114,7 @@ Was it easy to change given your refactoring?
 
  # Submission instructions
  
- ### onE of the pair Rush the project to the github repo
+ ### One of the pair push the project to the github repo
 
  ### BOTH PEOPLE IN THE PAIR SHOULD Upload the file `TicTacToe.cpp` & `test.cpp` to the blackboard "Refactoring Lab" assignment on their own BB account
  
