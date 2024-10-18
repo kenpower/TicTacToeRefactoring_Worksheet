@@ -104,7 +104,15 @@ Was it easy to change given your refactoring?
  Just to have something to work with, we’ll call a win worth 100 points, and any other move 0 points.
  (We can imagine a winning move by the other player being worth -100 points, but we don’t check for those — yet.)
  
- A smarter program would be able to score each valid move: There might be moves woth 100(win), moves worth -100(lose) and moves with scores inbetween.
+ A smarter program would be able to score each valid move: There might be moves worth 100(win), moves worth -100(lose) and moves with scores inbetween.
+
+ e.g. a move that gives a line with 2 of my squares and a blank (in any order) is a better move than two disconnected squares (the left hand picture is a better position for X than the right hand picture):
+
+```
+ X-O    X-O
+ ---    ---
+ X--    -X- 
+```
  
  With scoring in place we would like to return the *best* available move, the move with the higest score.
  
@@ -117,6 +125,24 @@ Was it easy to change given your refactoring?
  ### One of the pair push the project to the github repo
 
  ### BOTH PEOPLE IN THE PAIR SHOULD Upload the file `TicTacToe.cpp` & `test.cpp` to the blackboard "Refactoring Lab" assignment on their own BB account
+
+ ### Each person should answer *four* of the following questions in the submisssion section of the blackboard assignment
+
+1. Collaboration: What did you learn about working together with your partner? Were there any challenges you faced?
+
+2. Communication: How did you communicate your ideas to each other? What strategies were effective?
+
+3. Role Distribution: How did you decide who would take on which roles or tasks during the activity? Was this effective?
+
+4. Learning Outcomes: What new skills or concepts did you learn from your partner? Did their perspective change your understanding of the material?
+
+5. Feedback: How did you give and receive feedback during the pairing? Was there anything you found particularly helpful or unhelpful?
+
+6. Time Management: How did you manage your time together? Were there any time-related challenges?
+
+7. Personal Growth: What did you discover about your own learning style or preferences through this pairing experience?
+
+8. Future Improvements: If you could do this pairing activity again, what would you change to make it more effective?
  
  ## [Advanced & Optional] Evaluate the opponent's move
  
