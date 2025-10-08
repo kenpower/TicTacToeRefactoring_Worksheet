@@ -25,7 +25,19 @@ jobs:
     - name: Setup VSTest and add to PATH
       uses: darenm/Setup-VSTest@v1
       id: setup_vstest
-
+      
+    - name: Modify project to target latest SDK
+      run: |
+        dir
+        # Find the latest SDK version installed
+        $latest_sdk = Get-ChildItem "C:\Program Files (x86)\Windows Kits\10\bin" -Recurse -Directory | Select-Object -ExpandProperty Name | Sort-Object | Select-Object -Last 1
+        Write-Host "Targeting SDK version: $latest_sdk"
+        
+        # Update the .vcxproj file to target the latest SDK version
+        [xml]$vcxproj = Get-Content "TicTacToeRefactoring.vcxproj"
+        $vcxproj.Project.PropertyGroup.WindowsTargetPlatformVersion = $latest_sdk
+        $vcxproj.Save("TicTacToeRefactoring.vcxproj")
+    
     - name: Run tests
       id: run-tests
       shell: bash # test runner uses git bash shell in windows
